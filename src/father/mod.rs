@@ -1,12 +1,14 @@
-pub mod child;
 
 #[macro_export]
 macro_rules! impl_test {
-    ($struct:ident) => {
+($struct:ident) => {
+
         impl $struct {
-            fn test() {
+            pub fn test() {
                 println!("test");
             }
         }
     };
 }
+
+pub mod child;
